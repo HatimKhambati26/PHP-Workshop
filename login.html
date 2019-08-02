@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+
+<body
+    style="width:100vw; height:100vh; display: flex; flex-direction: column; justify-content:center; align-items:center; overflow: hidden">
+    <div
+        style="width: 400px; height: 400px;font-size:1.2em; color:white; box-shadow:5px 5px #aaaaaa; border-radius: 10px; background: #04223b; display: flex; flex-direction: column; justify-content:space-evenly; align-items:center; text-align: justify;">
+        <h1 style="text-align: center; color:aqua">Login</h1>
+        <form action="login.php" method="POST" autocomplete="off">
+            Username:&nbsp;<input type="text" name="username" placeholder="Enter Username" required />*
+            <br><br>
+            Password:&nbsp;<input type="password" name="password" placeholder="Enter Password" required />*
+            <br><br>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+            <a href="registration.html" style="text-decoration: none; color:aqua">Register</a>
+        </form>
+    </div>
+
+</body>
+
+</html>

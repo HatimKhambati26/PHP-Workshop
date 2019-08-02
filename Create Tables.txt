@@ -1,0 +1,52 @@
+CREATE TABLE IF NOT EXISTS Users (
+    user_id INT AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    passwd VARCHAR(255) NOT NULL,
+    createdttm Datetime DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id)
+)  ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS Department (
+    dep_id INT AUTO_INCREMENT,
+    dep_name VARCHAR(255) NOT NULL ,
+    dep_hod VARCHAR(255) NOT NULL,
+    PRIMARY KEY (dep_id)
+)  ENGINE=INNODB;
+
+
+CREATE TABLE IF NOT EXISTS Student (
+    s_id INT,
+    s_name VARCHAR(255) NOT NULL ,
+    s_age INT NOT NULL,
+    s_gender VARCHAR(1) NOT NULL ,
+    dep_id INT,
+    FOREIGN KEY (s_id) REFERENCES users(user_id),
+FOREIGN KEY (dep_id)  REFERENCES department(dep_id))  ENGINE=INNODB;
+ 
+
+CREATE TABLE `subject` (
+  `subject_id` int(11) AUTO_INCREMENT NULL,
+  `subject_name` varchar(255) NOT NULL,
+  `credits` int(11) NOT NULL,
+  `hours` int(11) DEFAULT NULL,
+  `sem` int(11) DEFAULT NULL,
+PRIMARY KEY (subject_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS Staff (
+    staff_id INT AUTO_INCREMENT,
+    staff_name VARCHAR(255) NOT NULL ,
+    staff_age INT NOT NULL,
+    staff_gender VARCHAR(1) NOT NULL ,
+    dep_id INT,
+    subject_id_1 int,
+    subject_id_2 int,
+    subject_id_3 int,
+    staff_salary int not null,
+    FOREIGN KEY (staff_id) REFERENCES users(user_id),
+    FOREIGN KEY (dep_id) REFERENCES department(dep_id),
+
+    FOREIGN KEY (subject_id_1) REFERENCES subject(subject_id),
+    FOREIGN KEY (subject_id_2) REFERENCES subject(subject_id),
+    FOREIGN KEY (subject_id_3) REFERENCES subject(subject_id),
+PRIMARY KEY (staff_id))  ENGINE=INNODB;
