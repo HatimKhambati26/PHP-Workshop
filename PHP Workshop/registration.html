@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+
+    <!-- Include Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="box">
+        <h1>Register</h1>
+        
+        <!-- GET Method NOT RECOMMENDED for SENSITIVE Information -->
+        <form action="register.php" method="GET" autocomplete="off">
+            <table>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="username" placeholder="Enter Username" required /></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" placeholder="Enter Password" required /></td>
+                </tr>
+
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="male" required>Male
+                        <input type="radio" name="gender" value="female" required>Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Branch:</td>
+                    <td>
+                        <select name="branch" required>
+                            <option selected hidden value="">----------</option>
+                            <option value="comps">Computer</option>
+                            <option value="it">IT</option>
+                        </select>
+                </tr>
+                <tr>
+                    <td>Year:</td>
+                    <td>
+                        <select name="year" required>
+                            <option selected hidden value="">-----------</option>
+                            <option value="fe">FE</option>
+                            <option value="se">SE</option>
+                            <option value="te">TE</option>
+                            <option value="be">BE</option>
+                        </select>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Register" /></td>
+                    <td><input type="reset" value="Reset" /></td>
+                    <td><a href="login.html">Login</a></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+
+</html>

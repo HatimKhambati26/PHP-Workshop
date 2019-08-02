@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <!-- Include Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="box">
+        <h1>Login</h1>
+
+        <!-- POST method Recommended when working with SENSITIVE Information -->
+        <form action="login.php" method="POST" autocomplete="off">
+        <table>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="username" placeholder="Enter Username" required /></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" placeholder="Enter Password" required /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Login" /></td>
+                    <td><input type="reset" value="Reset" /></td>
+                    <td><a href="registration.html">Register</a></td>
+                </tr>
+        </form>
+    </div>
+
+</body>
+
+</html>

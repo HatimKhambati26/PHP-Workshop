@@ -1,0 +1,30 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    font-size: 1.2em;
+    color: white;
+    box-shadow: 5px 5px #aaaaaa;
+    border-radius: 10px;
+    background: #04223b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+h1, a {
+    text-align: center;
+    color: aqua;
+    text-decoration: none;
+}
